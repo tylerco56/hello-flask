@@ -1,10 +1,9 @@
-from flask import Flask
+from flask import Flask, request
 
 app = Flask(__name__)
-app.config['DEBUG'] = True
 
 @app.route("/")
 def index():
     return "Hello World"
 
-app.run()
+app.run(debug=True)
