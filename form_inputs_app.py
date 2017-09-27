@@ -1,0 +1,76 @@
+<!--type=text,password,email-->
+
+@app.route("/form-inputs")
+def display_form_inputs():
+
+return """
+<style>
+br {margin-bottom: 20px;}
+<form method="POST">
+
+    <!--<label for="name"> <input name="name" type="text /> *optional format-->
+
+    <label>type=text
+        <input name="user-name" type="text" />
+    </label>
+
+    <br>
+
+    <label>type=password
+        <input name="user-password" type="password" />
+    </label>
+
+    <br>
+
+    <label>type=email
+        <input name="user-email" type="email" />
+    </label>
+
+    <br>
+
+    <label>Ketchup
+        <input type="checkbox" name="cb1" value="first-cb" />
+    </label>
+
+    <br>
+
+    <label>mustard
+        <input name="cb2" type="checkbox" value="second-cb" />
+    </label>
+
+    <br>
+
+    <label>Small
+        <input type="radio" name="coffee_size" value="sm" />
+    </label>
+
+    <br>
+
+    <label>Medium
+        <input type="radio" name="coffee_size" value="md" />
+    </label>
+
+    <br>
+
+    <label>Large
+        <input type="radio" name="coffee_size" value="lg" />
+    </label>
+
+    <br>
+
+    <label>Your life story
+        <textarea name="life-story"></textarea>
+    </label>
+
+    <br>
+
+        <label>LaunchCode Hub
+            <select name="lc-hub">
+                <option value="kc">Kansas City</option>
+                <option value="mia">Miami</option>
+                <option value="ri">Providence</option>
+                <option value="sea">Seattle</option>
+                <option value="pdx">Portland</option>
+            </select>
+        </label>
+"""
